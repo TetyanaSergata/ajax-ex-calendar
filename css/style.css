@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: lightgreen;
+}
+
+.wrapper{
+  height: 550px;
+  width: 600px;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+.year{
+  text-align: center;
+  padding: 10px;
+}
