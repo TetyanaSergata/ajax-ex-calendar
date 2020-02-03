@@ -15,8 +15,26 @@
   <body>
     <div class="year">January 2018</div>
     <div class="wrapper">
-      <div class="day"></div>
+      <!-- <div class="day"></div> -->
+      <ul class="days">
+        <li>1 Gennaio - Capodanno</li>
+        <li>2 Gennaio</li>
+        <li>3 Gennaio</li>
+        <li>4 Gennaio</li>
+        <li>5 Gennaio</li>
+        <li>6 Gennaio - Epifania</li>
+      </ul>
     </div>
+
+    <!-- Template  -->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h1>{{title}}</h1>
+        <div class="body">
+          {{body}}
+        </div>
+      </div>
+    </script>
 
 
     <!-- Script Javascript -->

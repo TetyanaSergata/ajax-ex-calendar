@@ -19,3 +19,11 @@ body{
   text-align: center;
   padding: 10px;
 }
+
+.days{
+  display: none;
+}
+
+#entry-template{
+  display: none;
+}
