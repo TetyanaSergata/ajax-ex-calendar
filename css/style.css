@@ -8,22 +8,27 @@ body{
   background-color: lightgreen;
 }
 
-.wrapper{
-  height: 550px;
-  width: 600px;
-  margin: auto;
-  border: 1px solid grey;
+.title{
+  margin: 15px 50px;
+}
+.prev,
+.next{
+  font-size: 20px;
 }
 
 .year{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 
 .days{
   display: none;
 }
-
+.red{
+  color: red;
+}
 #entry-template{
   display: none;
 }

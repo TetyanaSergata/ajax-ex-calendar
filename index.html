@@ -13,28 +13,20 @@
     <title>Calendar</title>
   </head>
   <body>
-    <div class="year">January 2018</div>
-    <div class="wrapper">
-      <!-- <div class="day"></div> -->
-      <ul class="days">
-        <li>1 Gennaio - Capodanno</li>
-        <li>2 Gennaio</li>
-        <li>3 Gennaio</li>
-        <li>4 Gennaio</li>
-        <li>5 Gennaio</li>
-        <li>6 Gennaio - Epifania</li>
-      </ul>
+    <div class="year">
+      <div class="prev">Prev</div>
+      <h1 class="title">January 2018</h1>
+      <div class="next">Next</div>
     </div>
+    <!-- Lista giorni -->
+    <ul class="days"></ul>
 
     <!-- Template  -->
     <script id="entry-template" type="text/x-handlebars-template">
-      <div class="entry">
-        <h1>{{title}}</h1>
-        <div class="body">
-          {{body}}
-        </div>
-      </div>
-    </script>
+      <li class="day"></li>
+        <span class="date">{{day}} {{month}}</span>
+        <span class="day_off red"></span>
+      </script>
 
 
     <!-- Script Javascript -->
