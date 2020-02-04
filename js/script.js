@@ -9,52 +9,50 @@ $(document).ready(function() {
   var monthFull = moment(
     {
       year: year,
-      month: startMonth
+      month: startMonth,
     }
   );
 
-  // creo un ciclo per i giorni del mese
-  for (var i = 1; i <= 31; i++) {
-    // console.log(i);
-    // console.log(monthFull.format('MMMM'));
-    // Template  Handlebars
-    var source = $('#entry-template').html();
-    var template = Handlebars.compile(source);
-    var context = {
-      day: i,
-      month: monthFull.format('MMMM'),
+dayOfMonth(monthFull);
+var url = 'https://flynn.boolean.careers/exercises/api/holidays';
 
-    };
-    var html = template(context);
-    // Spostiamo il contenuto dentro l'elemento con .append
-    $('.days').append(html);
-  }
-});
+// Chiamata Ajax
+  $.ajax(
+    {
+      'url': url,
+      'method': 'Get',
+      'success': function(data, response) {
+      // console.log(data);
+      // console.log(response);
+    },
+    'error': function (request, state, errors) {
+      alert('errore' + errors);
+    }
+  });
 
 
-//   var url = 'https://flynn.boolean.careers/exercises/api/holidays?year=2018&month=0';
-//
-//
-//   var date = moment("2018-01", "YYYYMM").daysInMonth();
-//
-//
-//
-//
-//   // Chiamata Ajax
-//   $.ajax(
-//     {
-//       'url': url,
-//       'method': 'Get',
-//       'success': function(data, response) {
-//       // console.log(data);
-//       // console.log(response);
-//     },
-//     'error': function (request, state, errors) {
-//       alert('errore' + errors);
-//     }
-//   });
-//
-// });
-//
-//
-//  // Funzioni
+
+// var date = moment("2018-01", "YYYYMM").daysInMonth();
+
+ // Funzioni
+ function dayOfMonth(month) {
+   // creo un ciclo per i giorni del mese e poi lo sposto in una funzione
+   for (var i = 1; i <= 31; i++) {
+     // console.log(i);
+     // Template  Handlebars
+     var source = $('#entry-template').html();
+     var template = Handlebars.compile(source);
+     var context = {
+       day: i,
+       month: monthFull.format('MMMM'),
+       // console.log(monthFull.format('MMMM'));
+       // Utilizziamo l'attributo 'date-complete'
+       dateComplete: monthFull.format('YYYY-MM-DD')
+     };
+
+     var html = template(context);
+     // Spostiamo il contenuto dentro l'elemento con .append
+     $('.days').append(html);
+   }
+ }
+ });

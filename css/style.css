@@ -8,6 +8,13 @@ body{
   background-color: lightgreen;
 }
 
+.wrapper{
+  width: 600px;
+  margin: 15px auto;
+  padding: 10px;
+  border: 1px solid green;
+}
+
 .year{
   margin: 15px 50px;
 }
@@ -26,6 +33,7 @@ body{
 .days{
   text-align: center;
   font-size: 20px;
+  list-style: none;
 }
 .red{
   color: red;
