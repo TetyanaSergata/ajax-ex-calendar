@@ -8,15 +8,15 @@ body{
   background-color: lightgreen;
 }
 
-.title{
+.year{
   margin: 15px 50px;
 }
 .prev,
 .next{
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.year{
+.calendar{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,8 @@ body{
 }
 
 .days{
-  display: none;
+  text-align: center;
+  font-size: 20px;
 }
 .red{
   color: red;
